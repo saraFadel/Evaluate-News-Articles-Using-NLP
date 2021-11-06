@@ -22,7 +22,7 @@ app.use(express.static('dist'))
 
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key='
 
-app.get('/here/*', async (req, res) => {
+app.get('/article/*', async (req, res) => {
     // res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/views/index.html'))
     const url = req.params[0]
@@ -42,4 +42,3 @@ app.listen(process.env.PORT, (error) => {
     if (error) throw new Error(error)
     console.log(`Server listening on port ${process.env.PORT}!`)
 })
-

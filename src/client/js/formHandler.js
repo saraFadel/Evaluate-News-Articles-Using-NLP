@@ -5,8 +5,8 @@ const URL = document.getElementById('articleUrl')
 export function handleSubmit (e) {
     e.preventDefault()
     if(Client.URLValidator(URL.value)){
-
-        fetch("http://localhost:8081/here/"+ URL.value)
+      //Send the article's URL to the server
+      fetch("http://localhost:8081/article/"+ URL.value)
       .then(response => response.json())
       .then(function(response) {
         console.log(response.msg);
