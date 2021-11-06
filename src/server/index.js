@@ -6,10 +6,6 @@ const axios = require('axios')
 const dotenv = require('dotenv')
 dotenv.config()
 
-//const mockAPIResponse = require('./mockAPI.js')
-
-// const PORT = 8081
-
 // Create an instance for the server
 const app = express()
 
@@ -25,8 +21,6 @@ app.use(express.urlencoded({
 app.use(express.static('dist'))
 
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key='
-// const APIToken = 'dc4d71a221ccb400626989d912dbf07b'
-
 
 app.get('/here/*', async (req, res) => {
     // res.sendFile('dist/index.html')
