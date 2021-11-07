@@ -21,13 +21,18 @@ app.use(express.urlencoded({
 app.use(express.static('dist'))
 
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key='
+const API_KEY ='dc4d71a221ccb400626989d912dbf07b'
 
 app.get('/article/*', async (req, res) => {
     // res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/views/index.html'))
     const url = req.params[0]
 
+    /*
+    I have removed this command to make the reviwer run the code without need to establish a .env file
     const response = await axios.get(`${baseURL}${process.env.API_KEY}&url=${url}&lang=en`)
+    */
+    const response = await axios.get(`${baseURL}${API_KEY}&url=${url}&lang=en`)
     console.log(response.data.confidence)
     res.send({
         msg: response.data.status.msg,
