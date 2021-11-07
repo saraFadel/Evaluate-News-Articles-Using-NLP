@@ -6,7 +6,6 @@
 
 --------------------------------
 Before running the code, you must create a .env file in the root directory then includes in it 
-PORT = YOUR_PORT
 API_KEY = 'YOUR API_TOKEN'
 --------------------------------
 
