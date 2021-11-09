@@ -11,17 +11,19 @@
       <div class="container">
         <h2>Sentiment Analysis For Articles</h2>
         <section>
-          <form id= "form" > 
+          <form id= "form" onsubmit="return Client.handleSubmit(e)"> 
             <input id= "articleUrl" type= "text" name= "input" value= "" placeholder="Enter article's URL here" />
             <input
               type= "submit"
               class= "btn-submit"
-              value= "Submit"/>
+              value= "Submit"
+              onclick="return Client.handleSubmit(e)" 
+              onsubmit="return handleSubmit(e)"/>
           </form>
         </section>
 
         <section >
-          <strong>Evaluation Results:</strong>
+          <h3>Evaluation Results:</h3>
           <div id="agreement"></div>
           <div id="subjectivity"></div>
           <div id="confidence"></div>
