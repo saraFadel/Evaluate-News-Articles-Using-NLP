@@ -28,7 +28,7 @@ const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key='
 // const APIToken = 'dc4d71a221ccb400626989d912dbf07b'
 
 
-app.get('/here/*', async (req, res) => {
+app.get('/article/*', async (req, res) => {
     // res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/views/index.html'))
     const url = req.params[0]
